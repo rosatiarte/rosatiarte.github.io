@@ -93,6 +93,59 @@
       main { padding: 35px 16px; }
       .intro h2 { font-size: 32px; }
     }
+    
+    .galleria {
+      margin: 70px 0;
+    }
+
+    .galleria h2 {
+      font-size: 32px;
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+
+    .galleria-intro {
+      color: #777;
+      margin-bottom: 28px;
+      line-height: 1.6;
+    }
+
+    .griglia-opere {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+    }
+
+    .opera-card {
+      margin: 0;
+    }
+
+    .opera-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .opera-card figcaption {
+      margin-top: 12px;
+      color: #222;
+      font-size: 16px;
+    }
+
+    .opera-card figcaption small {
+      display: block;
+      margin-top: 6px;
+      color: #777;
+      font-size: 12px;
+    }
+
+    @media (max-width: 600px) {
+      .griglia-opere {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
   </style>
 </head>
 
