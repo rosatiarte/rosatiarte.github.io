@@ -4,30 +4,124 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pierangelo Rosati — Arte</title>
+  <title>Pierangelo Rosati | Arte</title>
+  <meta name="description" content="Sito artistico di Pierangelo Rosati: dipinti, disegni e ricerca visiva.">
   <style>
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
-      background: #f7f6f2;
-      color: #242424;
-      font-family: Georgia, serif;
-      text-align: center;
+      background: #fff;
+      color: #222;
+      font-family: Georgia, "Times New Roman", serif;
     }
-    header { padding: 70px 20px 35px; }
-    h1 { font-size: 42px; font-weight: normal; }
-    p { font-size: 19px; line-height: 1.7; }
-    main { padding: 20px; }
-    footer { padding: 40px 20px; font-size: 14px; }
+
+    header {
+      padding: 34px 6%;
+      border-bottom: 1px solid #eee;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 25px;
+      font-weight: normal;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      margin: 8px 0 0;
+      font: 11px Arial, sans-serif;
+      letter-spacing: 3px;
+      color: #777;
+      text-transform: uppercase;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 55px 24px;
+    }
+
+    .intro {
+      margin-bottom: 32px;
+    }
+
+    .intro h2 {
+      font-size: clamp(30px, 5vw, 48px);
+      font-weight: normal;
+      margin: 0 0 12px;
+    }
+
+    .intro p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: #666;
+    }
+
+    .opera {
+      margin: 0;
+    }
+
+    .opera img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    figcaption {
+      margin-top: 12px;
+      font-size: 13px;
+      color: #777;
+    }
+
+    .presentazione {
+      max-width: 650px;
+      margin: 65px auto;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    footer {
+      border-top: 1px solid #eee;
+      padding: 28px 6%;
+      color: #777;
+      font: 12px Arial, sans-serif;
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 25px 20px; }
+      main { padding: 35px 16px; }
+      .intro h2 { font-size: 32px; }
+    }
   </style>
 </head>
+
 <body>
   <header>
-    <h1>Pierangelo Rosati</h1>
-    <p>Dipinti, disegni e ricerca artistica</p>
+    <h1>PIERANGELO ROSATI</h1>
+    <p>Pittura · Disegno · Ricerca visiva</p>
   </header>
+
   <main>
-    <p>Benvenuti nel mio spazio artistico.</p>
+    <section class="intro">
+      <h2>Immagini, figure, simboli.</h2>
+      <p>Uno spazio dedicato alle opere e alla ricerca artistica.</p>
+    </section>
+
+    <figure class="opera">
+      <img src="apertura.jpg"
+           alt="Opera di Pierangelo Rosati: tre figure urlanti su uno sfondo giallo e blu">
+      <figcaption>Opera di Pierangelo Rosati</figcaption>
+    </figure>
+
+    <section class="presentazione">
+      <p>
+        La pittura e il disegno come strumenti di ricerca,
+        attraverso figure, segni e simboli.
+      </p>
+    </section>
   </main>
+
   <footer>
     © Pierangelo Rosati
   </footer>
