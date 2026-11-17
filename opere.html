@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Opere | Pierangelo Rosati</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #fff;
+      color: #222;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    header {
+      padding: 34px 6%;
+      border-bottom: 1px solid #eee;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 25px;
+      font-weight: normal;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      margin: 8px 0 0;
+      font: 11px Arial, sans-serif;
+      letter-spacing: 3px;
+      color: #777;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+      margin-top: 24px;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      font: 11px Arial, sans-serif;
+      letter-spacing: 2px;
+    }
+
+    nav a:hover { text-decoration: underline; }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 55px 24px;
+    }
+
+    h2 {
+      font-size: 38px;
+      font-weight: normal;
+      margin: 0 0 12px;
+    }
+
+    .introduzione {
+      color: #777;
+      line-height: 1.7;
+      margin-bottom: 35px;
+    }
+
+    .griglia {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 36px 28px;
+    }
+
+    figure { margin: 0; }
+
+    figure img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    figcaption {
+      margin-top: 13px;
+      font-size: 16px;
+    }
+
+    figcaption small {
+      display: block;
+      margin-top: 6px;
+      color: #777;
+      font-size: 12px;
+    }
+
+    footer {
+      border-top: 1px solid #eee;
+      padding: 28px 6%;
+      color: #777;
+      font: 12px Arial, sans-serif;
+    }
+
+    @media (max-width: 600px) {
+      main { padding: 35px 16px; }
+      .griglia { grid-template-columns: 1fr; }
+      h2 { font-size: 32px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>PIERANGELO ROSATI</h1>
+    <p>Pittura · Disegno · Ricerca visiva</p>
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="opere.html">OPERE</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Opere selezionate</h2>
+    <p class="introduzione">
+      Una selezione di dipinti e disegni.
+    </p>
+
+    <div class="griglia">
+      <figure>
+        <img
+          src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=900"
+          alt="Immagine dimostrativa di arte astratta">
+        <figcaption>
+          Senza titolo I
+          <small>Immagine provvisoria · Tecnica da definire</small>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900"
+          alt="Immagine dimostrativa di un'opera d'arte">
+        <figcaption>
+          Senza titolo II
+          <small>Immagine provvisoria · Tecnica da definire</small>
+        </figcaption>
+      </figure>
+    </div>
+  </main>
+
+  <footer>
+    © Pierangelo Rosati
+  </footer>
+</body>
+</html>
