@@ -127,7 +127,8 @@
 
     <div class="griglia">
       <figure>
-        <img src="viris1.jpg" alt="Opera di Pierangelo Rosati">
+        <img src="viris1.jpg" alt="Opera di Pierangelo Rosati"
+          class="ingrandibile" tabindex="0" role="button">
         <figcaption>
           Senza titolo I
           <small>Immagine provvisoria · Tecnica da definire</small>
@@ -147,5 +148,94 @@
   <footer>
     © Pierangelo Rosati
   </footer>
+
+<div id="visualizzatore" role="dialog" aria-modal="true"
+     aria-label="Immagine ingrandita" hidden>
+  <button id="chiudi" type="button" aria-label="Chiudi">&times;</button>
+  <img id="immagine-grande" src="" alt="">
+</div>
+
+<style>
+  .ingrandibile {
+    cursor: zoom-in;
+  }
+
+  #visualizzatore[hidden] {
+    display: none;
+  }
+
+  #visualizzatore {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 45px 20px;
+  }
+
+  #immagine-grande {
+    display: block;
+    max-width: 95%;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+
+  #chiudi {
+    position: absolute;
+    top: 12px;
+    right: 22px;
+    color: white;
+    background: transparent;
+    border: none;
+    font-size: 38px;
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  const visualizzatore = document.getElementById('visualizzatore');
+  const immagineGrande = document.getElementById('immagine-grande');
+  const pulsanteChiudi = document.getElementById('chiudi');
+
+  function apriImmagine(img) {
+    immagineGrande.src = img.src;
+    immagineGrande.alt = img.alt;
+    visualizzatore.hidden = false;
+    pulsanteChiudi.focus();
+  }
+
+  function chiudiImmagine() {
+    visualizzatore.hidden = true;
+    immagineGrande.src = '';
+  }
+
+  document.querySelectorAll('.ingrandibile').forEach(img => {
+    img.addEventListener('click', () => apriImmagine(img));
+
+    img.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        apriImmagine(img);
+      }
+    });
+  });
+
+  pulsanteChiudi.addEventListener('click', chiudiImmagine);
+
+  visualizzatore.addEventListener('click', e => {
+    if (e.target === visualizzatore) chiudiImmagine();
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && !visualizzatore.hidden) {
+      chiudiImmagine();
+    }
+  });
+</script>
 </body>
+
 </html>
