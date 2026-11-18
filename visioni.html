@@ -3,101 +3,162 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Visioni | Pierangelo Rosati</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visioni – Pierangelo Rosati</title>
 
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
+      padding: 40px;
       background: #fff;
       color: #222;
-      font-family: Georgia, "Times New Roman", serif;
+      font-family: Georgia, serif;
     }
 
     header {
-      padding: 34px 6%;
-      border-bottom: 1px solid #eee;
+      max-width: 1100px;
+      margin: 0 auto 55px;
     }
 
     header h1 {
       margin: 0;
-      font-size: 25px;
+      font-size: 32px;
       font-weight: normal;
-      letter-spacing: 2px;
     }
 
     header p {
-      margin: 8px 0 0;
-      font: 11px Arial, sans-serif;
-      letter-spacing: 3px;
-      color: #777;
-      text-transform: uppercase;
+      margin-top: 12px;
+      color: #666;
+      font-size: 15px;
     }
 
-    nav {
+    header nav {
       display: flex;
-      flex-wrap: wrap;
+      align-items: flex-start;
       gap: 24px;
       margin-top: 24px;
     }
 
-    nav a {
+    header nav a {
       color: #333;
       text-decoration: none;
       font: 11px Arial, sans-serif;
       letter-spacing: 2px;
     }
 
-    nav a:hover { text-decoration: underline; }
+    header nav a:hover {
+      text-decoration: underline;
+    }
 
     main {
       max-width: 1100px;
-      margin: auto;
-      padding: 55px 24px;
-      min-height: 420px;
+      margin: 0 auto;
     }
 
-    h2 {
-      font-size: 38px;
-      font-weight: normal;
-      margin: 0 0 12px;
+    .galleria {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 50px 35px;
     }
 
-    .introduzione {
+    .opera {
+      margin: 0;
+    }
+
+    .opera img {
+      display: block;
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+    }
+
+    .opera figcaption {
+      margin-top: 14px;
+      font-size: 17px;
+    }
+
+    .dati {
+      margin-top: 6px;
       color: #777;
-      line-height: 1.7;
-      margin-bottom: 35px;
+      font-size: 12px;
+      line-height: 1.6;
     }
 
-    .in-preparazione {
-      margin-top: 55px;
-      padding: 28px 0;
-      border-top: 1px solid #eee;
-      color: #777;
-      line-height: 1.8;
-      max-width: 620px;
+    .segnaposto {
+      min-height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #e5e5e5;
+      color: #aaa;
+      font: 11px Arial, sans-serif;
+      letter-spacing: 2px;
     }
 
-    footer {
-      border-top: 1px solid #eee;
-      padding: 28px 6%;
-      color: #777;
-      font: 12px Arial, sans-serif;
+    .segnaposto figcaption {
+      margin: 0;
     }
 
-    @media (max-width: 600px) {
-      main { padding: 35px 16px; }
-      h2 { font-size: 32px; }
+    #ingrandimento {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: rgba(0, 0, 0, 0.92);
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      cursor: pointer;
+    }
+
+    #ingrandimento img {
+      max-width: 95%;
+      max-height: 90vh;
+      object-fit: contain;
+    }
+
+    #chiudi {
+      position: absolute;
+      top: 18px;
+      right: 28px;
+      color: white;
+      font: 32px Arial, sans-serif;
+    }
+
+    @media (max-width: 700px) {
+      body {
+        padding: 24px 18px;
+      }
+
+      header {
+        margin-bottom: 40px;
+      }
+
+      header h1 {
+        font-size: 27px;
+      }
+
+      .galleria {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .segnaposto {
+        min-height: 120px;
+      }
     }
   </style>
 </head>
 
 <body>
+
   <header>
-    <h1>PIERANGELO ROSATI</h1>
-    <p>Pittura · Disegno · Ricerca visiva</p>
+    <h1>Visioni</h1>
+    <p>Immagini, forme e simboli oltre la figura umana.</p>
 
     <nav>
       <a href="index.html">HOME</a>
@@ -106,21 +167,82 @@
   </header>
 
   <main>
-    <h2>Visioni</h2>
+    <div class="galleria">
 
-    <p class="introduzione">
-      Immagini, forme e simboli oltre la figura umana.
-    </p>
+      <figure class="opera">
+        <img src="pazzi.jpg"
+             alt="La congiura dei pazzi"
+             onclick="ingrandisci(this)">
+        <figcaption>La congiura dei pazzi</figcaption>
+        <div class="dati">Anno, tecnica e dimensioni da inserire</div>
+      </figure>
 
-    <div class="in-preparazione">
-      Questa sezione raccoglierà opere che esplorano
-      altri territori dell'immaginario.
+      <figure class="opera">
+        <img src="torre.jpg"
+             alt="La torre"
+             onclick="ingrandisci(this)">
+        <figcaption>La torre</figcaption>
+        <div class="dati">Anno, tecnica e dimensioni da inserire</div>
+      </figure>
+
+      <figure class="opera segnaposto">
+        <figcaption>OPERA 3</figcaption>
+      </figure>
+
+      <figure class="opera segnaposto">
+        <figcaption>OPERA 4</figcaption>
+      </figure>
+
+      <figure class="opera segnaposto">
+        <figcaption>OPERA 5</figcaption>
+      </figure>
+
+      <figure class="opera segnaposto">
+        <figcaption>OPERA 6</figcaption>
+      </figure>
+
+      <figure class="opera segnaposto">
+        <figcaption>OPERA 7</figcaption>
+      </figure>
+
+      <figure class="opera segnaposto">
+        <figcaption>OPERA 8</figcaption>
+      </figure>
+
+      <figure class="opera segnaposto">
+        <figcaption>OPERA 9</figcaption>
+      </figure>
+
+      <figure class="opera segnaposto">
+        <figcaption>OPERA 10</figcaption>
+      </figure>
+
     </div>
   </main>
 
-  <footer>
-    © Pierangelo Rosati
-  </footer>
+  <div id="ingrandimento" onclick="chiudiIngrandimento()">
+    <span id="chiudi">&times;</span>
+    <img id="immagineGrande" src="" alt="">
+  </div>
+
+  <script>
+    function ingrandisci(immagine) {
+      const overlay = document.getElementById('ingrandimento');
+      document.getElementById('immagineGrande').src = immagine.src;
+      document.getElementById('immagineGrande').alt = immagine.alt;
+      overlay.style.display = 'flex';
+    }
+
+    function chiudiIngrandimento() {
+      document.getElementById('ingrandimento').style.display = 'none';
+    }
+
+    document.addEventListener('keydown', function(evento) {
+      if (evento.key === 'Escape') {
+        chiudiIngrandimento();
+      }
+    });
+  </script>
+
 </body>
 </html>
-
