@@ -38,6 +38,7 @@
 
     nav {
       display: flex;
+      flex-wrap: wrap;
       gap: 24px;
       margin-top: 24px;
     }
@@ -52,9 +53,9 @@
     nav a:hover { text-decoration: underline; }
 
     main {
-      max-width: 1100px;
+      max-width: 1000px;
       margin: auto;
-      padding: 55px 24px;
+      padding: 55px 24px 80px;
     }
 
     h2 {
@@ -66,50 +67,46 @@
     .introduzione {
       color: #777;
       line-height: 1.7;
-      margin-bottom: 48px;
+      margin-bottom: 45px;
     }
 
-    .sezione {
-      margin-top: 58px;
-    }
-
-    .sezione h3 {
-      font-size: 27px;
-      font-weight: normal;
-      margin: 0 0 26px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid #eee;
-    }
-
-    .griglia {
+    .gallerie {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 36px 28px;
+      gap: 28px;
     }
 
-    figure { margin: 0; }
-
-    figure img {
+    .galleria {
       display: block;
-      width: 100%;
-      aspect-ratio: 4 / 3;
-      object-fit: cover;
+      padding: 30px;
+      border: 1px solid #e8e8e8;
+      color: #222;
+      text-decoration: none;
+      transition: border-color 0.2s;
     }
 
-    .ingrandibile {
-      cursor: zoom-in;
+    .galleria:hover {
+      border-color: #888;
     }
 
-    figcaption {
-      margin-top: 13px;
-      font-size: 16px;
+    .galleria h3 {
+      font-size: 25px;
+      font-weight: normal;
+      margin: 0 0 14px;
     }
 
-    figcaption small {
-      display: block;
-      margin-top: 6px;
+    .galleria p {
       color: #777;
-      font-size: 12px;
+      font-size: 15px;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .freccia {
+      display: block;
+      margin-top: 25px;
+      font: 12px Arial, sans-serif;
+      letter-spacing: 1px;
     }
 
     footer {
@@ -119,46 +116,11 @@
       font: 12px Arial, sans-serif;
     }
 
-    #visualizzatore[hidden] {
-      display: none;
-    }
-
-    #visualizzatore {
-      position: fixed;
-      inset: 0;
-      z-index: 9999;
-      background: rgba(0, 0, 0, 0.92);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 45px 20px;
-    }
-
-    #immagine-grande {
-      display: block;
-      max-width: 95%;
-      max-height: 90vh;
-      width: auto;
-      height: auto;
-      object-fit: contain;
-    }
-
-    #chiudi {
-      position: absolute;
-      top: 12px;
-      right: 22px;
-      color: white;
-      background: transparent;
-      border: none;
-      font-size: 38px;
-      cursor: pointer;
-    }
-
     @media (max-width: 600px) {
-      main { padding: 35px 16px; }
-      .griglia { grid-template-columns: 1fr; }
+      main { padding: 35px 16px 55px; }
       h2 { font-size: 32px; }
-      .sezione h3 { font-size: 25px; }
+      .gallerie { grid-template-columns: 1fr; }
+      .galleria { padding: 24px; }
     }
   </style>
 </head>
@@ -174,173 +136,33 @@
   </header>
 
   <main>
-    <h2>Galleria delle opere</h2>
+    <h2>Opere</h2>
     <p class="introduzione">
-      Una selezione di dipinti e disegni.
+      Due percorsi attraverso la ricerca pittorica e visiva.
     </p>
 
-    <section class="sezione">
-      <h3>La figura umana</h3>
+    <div class="gallerie">
+      <a class="galleria" href="figura-umana.html">
+        <h3>La figura umana</h3>
+        <p>
+          Volti, corpi e presenze: la figura come luogo
+          di trasformazione e ricerca interiore.
+        </p>
+        <span class="freccia">ESPLORA →</span>
+      </a>
 
-      <div class="griglia">
-
-        <figure>
-          <img src="viris1.jpg"
-               alt="Viris illustribus 1, Pierangelo Rosati"
-               class="ingrandibile" tabindex="0" role="button">
-          <figcaption>Viris illustribus 1
-            <small>2025 · acrilici su carta · 70 x 100 cm</small>
-          </figcaption>
-        </figure>
-
-        <figure>
-          <img src="viris2.jpg"
-               alt="Viris illustribus 2, Pierangelo Rosati"
-               class="ingrandibile" tabindex="0" role="button">
-          <figcaption>Viris illustribus 2
-            <small>2025 · inchiostro su carta · 21 x 29.7 cm</small>
-          </figcaption>
-        </figure>
-
-        <figure>
-          <img src="viris3.jpg"
-               alt="Viris illustribus 3, Pierangelo Rosati"
-               class="ingrandibile" tabindex="0" role="button">
-          <figcaption>Viris illustribus 3
-            <small>2026 · inchiostro su carta · 18.5 x 27.5 cm</small>
-          </figcaption>
-        </figure>
-
-        <figure>
-          <img src="nodo.jpg"
-               alt="Il nodo, Pierangelo Rosati"
-               class="ingrandibile" tabindex="0" role="button">
-          <figcaption>Il nodo
-            <small>2023 · inchiostro su carta · 30 x 40 cm</small>
-          </figcaption>
-        </figure>
-
-        <figure>
-          <img src="esilio.jpg"
-               alt="L'esilio, Pierangelo Rosati"
-               class="ingrandibile" tabindex="0" role="button">
-          <figcaption>L'esilio
-            <small>2026 · pastelli a olio su carta · 21 x 29.7 cm</small>
-          </figcaption>
-        </figure>
-
-        <figure>
-          <img src="pausa.jpg"
-               alt="Pausa, Pierangelo Rosati"
-               class="ingrandibile" tabindex="0" role="button">
-          <figcaption>Pausa
-            <small>2026 · olio su tela · 30 x 40 cm</small>
-          </figcaption>
-        </figure>
-
-        <figure>
-          <img src="compianto.jpg"
-               alt="Il compianto, Pierangelo Rosati"
-               class="ingrandibile" tabindex="0" role="button">
-          <figcaption>Il compianto
-            <small>2024 · acrilici su tela · 20 x 30 cm</small>
-          </figcaption>
-        </figure>
-
-        <figure>
-          <img src="silentium.jpg"
-               alt="Silentium, Pierangelo Rosati"
-               class="ingrandibile" tabindex="0" role="button">
-          <figcaption>Silentium
-            <small>2026 · acrilici su carta · 21 x 29.7 cm</small>
-          </figcaption>
-        </figure>
-
-        <figure>
-          <img src="voragine.jpg"
-               alt="La voragine dell'io, Pierangelo Rosati"
-               class="ingrandibile" tabindex="0" role="button">
-          <figcaption>La voragine dell'io
-            <small>2026 · acrilici su carta · 21 x 29.7 cm</small>
-          </figcaption>
-        </figure>
-
-      </div>
-    </section>
-
-    <section class="sezione">
-      <h3>Visioni</h3>
-
-      <div class="griglia">
-
-        <figure>
-          <img src="dixitdominus.jpg"
-               alt="Dixit Dominus, Pierangelo Rosati"
-               class="ingrandibile" tabindex="0" role="button">
-          <figcaption>Dixit Dominus
-            <small>2026 · acrilici su legno · 64 x 16 cm</small>
-          </figcaption>
-        </figure>
-
-      </div>
-    </section>
-
+      <a class="galleria" href="visioni.html">
+        <h3>Visioni</h3>
+        <p>
+          Immagini, forme e simboli oltre la figura umana.
+        </p>
+        <span class="freccia">ESPLORA →</span>
+      </a>
+    </div>
   </main>
 
   <footer>
     © Pierangelo Rosati
   </footer>
-
-  <div id="visualizzatore" role="dialog"
-       aria-modal="true"
-       aria-label="Immagine ingrandita" hidden>
-    <button id="chiudi" type="button"
-            aria-label="Chiudi">&times;</button>
-    <img id="immagine-grande" src="" alt="">
-  </div>
-
-  <script>
-    const visualizzatore =
-      document.getElementById('visualizzatore');
-    const immagineGrande =
-      document.getElementById('immagine-grande');
-    const pulsanteChiudi =
-      document.getElementById('chiudi');
-
-    function apriImmagine(img) {
-      immagineGrande.src = img.src;
-      immagineGrande.alt = img.alt;
-      visualizzatore.hidden = false;
-      pulsanteChiudi.focus();
-    }
-
-    function chiudiImmagine() {
-      visualizzatore.hidden = true;
-      immagineGrande.src = '';
-    }
-
-    document.querySelectorAll('.ingrandibile').forEach(img => {
-      img.addEventListener('click', () => apriImmagine(img));
-
-      img.addEventListener('keydown', e => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          apriImmagine(img);
-        }
-      });
-    });
-
-    pulsanteChiudi.addEventListener('click', chiudiImmagine);
-
-    visualizzatore.addEventListener('click', e => {
-      if (e.target === visualizzatore) chiudiImmagine();
-    });
-
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape' && !visualizzatore.hidden) {
-        chiudiImmagine();
-      }
-    });
-  </script>
 </body>
 </html>
