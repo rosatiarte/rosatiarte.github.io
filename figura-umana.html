@@ -1,1 +1,308 @@
 
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La figura umana | Pierangelo Rosati</title>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #fff;
+      color: #222;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    header {
+      padding: 34px 6%;
+      border-bottom: 1px solid #eee;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 25px;
+      font-weight: normal;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      margin: 8px 0 0;
+      font: 11px Arial, sans-serif;
+      letter-spacing: 3px;
+      color: #777;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-top: 24px;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      font: 11px Arial, sans-serif;
+      letter-spacing: 2px;
+    }
+
+    nav a:hover { text-decoration: underline; }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 55px 24px;
+    }
+
+    h2 {
+      font-size: 38px;
+      font-weight: normal;
+      margin: 0 0 12px;
+    }
+
+    .introduzione {
+      color: #777;
+      line-height: 1.7;
+      margin-bottom: 35px;
+    }
+
+    .griglia {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 36px 28px;
+    }
+
+    figure { margin: 0; }
+
+    figure img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .ingrandibile { cursor: zoom-in; }
+
+    figcaption {
+      margin-top: 13px;
+      font-size: 16px;
+    }
+
+    figcaption small {
+      display: block;
+      margin-top: 6px;
+      color: #777;
+      font-size: 12px;
+    }
+
+    footer {
+      border-top: 1px solid #eee;
+      padding: 28px 6%;
+      color: #777;
+      font: 12px Arial, sans-serif;
+    }
+
+    #visualizzatore[hidden] { display: none; }
+
+    #visualizzatore {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.92);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 45px 20px;
+    }
+
+    #immagine-grande {
+      display: block;
+      max-width: 95%;
+      max-height: 90vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+
+    #chiudi {
+      position: absolute;
+      top: 12px;
+      right: 22px;
+      color: white;
+      background: transparent;
+      border: none;
+      font-size: 38px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      main { padding: 35px 16px; }
+      .griglia { grid-template-columns: 1fr; }
+      h2 { font-size: 32px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>PIERANGELO ROSATI</h1>
+    <p>Pittura · Disegno · Ricerca visiva</p>
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="opere.html">OPERE</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>La figura umana</h2>
+    <p class="introduzione">
+      Volti, corpi e presenze: la figura umana come luogo
+      di trasformazione, tensione e ricerca interiore.
+    </p>
+
+    <div class="griglia">
+
+      <figure>
+        <img src="viris1.jpg" alt="Viris illustribus 1"
+             class="ingrandibile" tabindex="0" role="button">
+        <figcaption>Viris illustribus 1
+          <small>2025 · acrilici su carta · 70 x 100 cm</small>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img src="viris2.jpg" alt="Viris illustribus 2"
+             class="ingrandibile" tabindex="0" role="button">
+        <figcaption>Viris illustribus 2
+          <small>2025 · inchiostro su carta · 21 x 29.7 cm</small>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img src="viris3.jpg" alt="Viris illustribus 3"
+             class="ingrandibile" tabindex="0" role="button">
+        <figcaption>Viris illustribus 3
+          <small>2026 · inchiostro su carta · 18.5 x 27.5 cm</small>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img src="nodo.jpg" alt="Il nodo"
+             class="ingrandibile" tabindex="0" role="button">
+        <figcaption>Il nodo
+          <small>2023 · inchiostro su carta · 30 x 40 cm</small>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img src="esilio.jpg" alt="L'esilio"
+             class="ingrandibile" tabindex="0" role="button">
+        <figcaption>L'esilio
+          <small>2026 · pastelli a olio su carta · 21 x 29.7 cm</small>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img src="pausa.jpg" alt="Pausa"
+             class="ingrandibile" tabindex="0" role="button">
+        <figcaption>Pausa
+          <small>2026 · olio su tela · 30 x 40 cm</small>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img src="compianto.jpg" alt="Il compianto"
+             class="ingrandibile" tabindex="0" role="button">
+        <figcaption>Il compianto
+          <small>2024 · acrilici su tela · 20 x 30 cm</small>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img src="silentium.jpg" alt="Silentium"
+             class="ingrandibile" tabindex="0" role="button">
+        <figcaption>Silentium
+          <small>2026 · acrilici su carta · 21 x 29.7 cm</small>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img src="voragine.jpg" alt="La voragine dell'io"
+             class="ingrandibile" tabindex="0" role="button">
+        <figcaption>La voragine dell'io
+          <small>2026 · acrilici su carta · 21 x 29.7 cm</small>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img src="dixitdominus.jpg" alt="Dixit Dominus"
+             class="ingrandibile" tabindex="0" role="button">
+        <figcaption>Dixit Dominus
+          <small>2026 · acrilici su legno · 64 x 16 cm</small>
+        </figcaption>
+      </figure>
+
+    </div>
+  </main>
+
+  <footer>
+    © Pierangelo Rosati
+  </footer>
+
+  <div id="visualizzatore" role="dialog"
+       aria-modal="true" aria-label="Immagine ingrandita" hidden>
+    <button id="chiudi" type="button"
+            aria-label="Chiudi">&times;</button>
+    <img id="immagine-grande" src="" alt="">
+  </div>
+
+  <script>
+    const visualizzatore =
+      document.getElementById('visualizzatore');
+    const immagineGrande =
+      document.getElementById('immagine-grande');
+    const pulsanteChiudi =
+      document.getElementById('chiudi');
+
+    function apriImmagine(img) {
+      immagineGrande.src = img.src;
+      immagineGrande.alt = img.alt;
+      visualizzatore.hidden = false;
+      pulsanteChiudi.focus();
+    }
+
+    function chiudiImmagine() {
+      visualizzatore.hidden = true;
+      immagineGrande.src = '';
+    }
+
+    document.querySelectorAll('.ingrandibile').forEach(img => {
+      img.addEventListener('click', () => apriImmagine(img));
+
+      img.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          apriImmagine(img);
+        }
+      });
+    });
+
+    pulsanteChiudi.addEventListener('click', chiudiImmagine);
+
+    visualizzatore.addEventListener('click', e => {
+      if (e.target === visualizzatore) chiudiImmagine();
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && !visualizzatore.hidden) {
+        chiudiImmagine();
+      }
+    });
+  </script>
+</body>
+</html>
+
