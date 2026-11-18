@@ -188,6 +188,40 @@
   color: #999;
 }
 
+.menu-opere {
+  position: relative;
+}
+
+.sottomenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -12px;
+  padding-top: 12px;
+  min-width: 175px;
+  background: #fff;
+  z-index: 100;
+}
+
+.sottomenu a {
+  display: block;
+  padding: 12px;
+  color: #333;
+  font: 11px Arial, sans-serif;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.menu-opere:hover .sottomenu,
+.menu-opere:focus-within .sottomenu {
+  display: block;
+}
+
+.menu-opere > a {
+  display: inline-block;
+  padding-bottom: 12px;
+}
+
   </style>
 </head>
 
