@@ -359,9 +359,23 @@ main:has(.gallerie) h2 {
   object-fit: cover;
 }
 
+/* Didascalie uniformi in tutte le gallerie */
+.griglia figcaption,
+.griglia-opere figcaption {
+  margin-top: 13px;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+.griglia figcaption small,
 .griglia-opere figcaption small {
   display: block;
   margin-top: 6px;
-  color: #777;
+  font-family: Arial, sans-serif;
   font-size: 12px;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #777;
 }
