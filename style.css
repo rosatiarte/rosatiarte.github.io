@@ -1,4 +1,8 @@
 
+/* ========================================
+   STILE GENERALE
+======================================== */
+
 * {
   box-sizing: border-box;
 }
@@ -9,6 +13,10 @@ body {
   color: #222;
   font-family: Georgia, "Times New Roman", serif;
 }
+
+/* ========================================
+   INTESTAZIONE E NAVIGAZIONE
+======================================== */
 
 header {
   padding: 34px 6%;
@@ -24,9 +32,9 @@ header h1 {
 
 header p {
   margin: 8px 0 0;
+  color: #777;
   font: 11px Arial, sans-serif;
   letter-spacing: 3px;
-  color: #777;
   text-transform: uppercase;
 }
 
@@ -48,7 +56,12 @@ header nav a:hover {
   text-decoration: underline;
 }
 
-header nav .menu-opere {
+/* Menu a discesa della home */
+
+.menu-opere {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
   margin: 0;
   padding: 0;
   line-height: normal;
@@ -56,14 +69,8 @@ header nav .menu-opere {
 
 header nav .menu-opere > a {
   display: block;
-  padding: 0;
+  padding: 0 0 12px;
   line-height: normal;
-}
-
-.menu-opere {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
 }
 
 .sottomenu {
@@ -71,10 +78,10 @@ header nav .menu-opere > a {
   position: absolute;
   top: 100%;
   left: -12px;
-  padding-top: 12px;
-  min-width: 175px;
-  background: #fff;
   z-index: 100;
+  min-width: 175px;
+  padding-top: 12px;
+  background: #fff;
 }
 
 .sottomenu a {
@@ -91,10 +98,9 @@ header nav .menu-opere > a {
   display: block;
 }
 
-.menu-opere > a {
-  display: inline-block;
-  padding-bottom: 12px;
-}
+/* ========================================
+   CONTENUTO GENERALE
+======================================== */
 
 main {
   max-width: 1100px;
@@ -102,39 +108,25 @@ main {
   padding: 55px 24px;
 }
 
+/* Introduzioni */
+
 .intro {
   margin-bottom: 32px;
 }
 
 .intro h2 {
+  margin: 0 0 12px;
   font-size: clamp(30px, 5vw, 48px);
   font-weight: normal;
-  margin: 0 0 12px;
 }
 
 .intro p {
+  color: #666;
   font-size: 17px;
   line-height: 1.7;
-  color: #666;
 }
 
-.opera {
-  margin: 0;
-}
-
-.opera img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  height: auto;
-  object-fit: cover;
-}
-
-figcaption {
-  margin-top: 12px;
-  font-size: 13px;
-  color: #777;
-}
+/* Presentazione dell'artista */
 
 .presentazione {
   max-width: 800px;
@@ -154,11 +146,11 @@ figcaption {
   margin: 18px 0 30px;
   padding: 0;
   border: none;
-  text-align: left;
   color: #777;
+  text-align: left;
   font-size: 0.88rem;
-  line-height: 1.6;
   font-weight: 400;
+  line-height: 1.6;
 }
 
 .epigrafe p {
@@ -167,56 +159,195 @@ figcaption {
 
 .epigrafe cite {
   display: block;
+  color: #999;
   font-size: 0.8rem;
   font-style: normal;
-  color: #999;
 }
 
-.galleria {
-  margin: 70px 0;
+/* ========================================
+   PAGINA OPERE
+======================================== */
+
+main:has(.gallerie) {
+  max-width: 1000px;
+  padding: 55px 24px 80px;
 }
 
-.galleria h2 {
-  font-size: 32px;
+main:has(.gallerie) h2 {
+  margin: 0 0 12px;
+  font-size: 38px;
   font-weight: normal;
-  margin-bottom: 10px;
 }
 
-.galleria-intro {
+.introduzione {
+  margin-bottom: 45px;
   color: #777;
-  margin-bottom: 28px;
-  line-height: 1.6;
+  font-size: 15px;
+  line-height: 1.7;
 }
 
-.griglia-opere {
+.gallerie {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 28px;
 }
 
+.galleria {
+  display: block;
+  margin: 0;
+  padding: 30px;
+  border: 1px solid #e8e8e8;
+  color: #222;
+  text-decoration: none;
+  transition: border-color 0.2s;
+}
+
+.galleria:hover {
+  border-color: #888;
+}
+
+.galleria h3 {
+  margin: 0 0 14px;
+  font-size: 25px;
+  font-weight: normal;
+}
+
+.galleria p {
+  margin: 0;
+  color: #777;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.freccia {
+  display: block;
+  margin-top: 25px;
+  font: 12px Arial, sans-serif;
+  letter-spacing: 1px;
+}
+
+/* ========================================
+   GALLERIE: FIGURA UMANA E VISIONI
+======================================== */
+
+/* Griglia comune */
+
+.griglia,
+.griglia-opere {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 36px 28px;
+}
+
+.griglia figure,
+.griglia-opere figure,
 .opera-card {
+  min-width: 0;
   margin: 0;
 }
 
-.opera-card img {
+/* Immagini delle gallerie */
+
+.griglia img,
+.griglia-opere img {
   display: block;
   width: 100%;
+  max-width: 100%;
+  height: auto;
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
 
-.opera-card figcaption {
-  margin-top: 12px;
-  color: #222;
-  font-size: 16px;
+/* Cursore per le immagini ingrandibili */
+
+.ingrandibile {
+  cursor: zoom-in;
 }
 
+/* Didascalie comuni */
+
+.griglia figcaption,
+.griglia-opere figcaption,
+.opera-card figcaption {
+  margin-top: 13px;
+  color: #333;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.griglia figcaption small,
+.griglia-opere figcaption small,
 .opera-card figcaption small {
   display: block;
   margin-top: 6px;
   color: #777;
+  font-family: Arial, sans-serif;
   font-size: 12px;
+  font-weight: normal;
+  line-height: 1.5;
 }
+
+/* Eventuale galleria della home */
+
+.opera {
+  min-width: 0;
+  margin: 0;
+}
+
+.opera img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+figcaption {
+  margin-top: 12px;
+}
+
+/* ========================================
+   INGRANDIMENTO IMMAGINI
+======================================== */
+
+#visualizzatore[hidden] {
+  display: none;
+}
+
+#visualizzatore {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 45px 20px;
+  background: rgba(0, 0, 0, 0.92);
+}
+
+#immagine-grande {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 95%;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+#chiudi {
+  position: absolute;
+  top: 12px;
+  right: 22px;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 38px;
+  cursor: pointer;
+}
+
+/* ========================================
+   FOOTER E CONTATTI
+======================================== */
 
 footer {
   border-top: 1px solid #eee;
@@ -248,6 +379,10 @@ footer p {
   text-decoration: underline;
 }
 
+/* ========================================
+   ADATTAMENTO A TELEFONI E SCHERMI PICCOLI
+======================================== */
+
 @media (max-width: 600px) {
   header {
     padding: 25px 20px;
@@ -261,72 +396,17 @@ footer p {
     font-size: 32px;
   }
 
-  .griglia-opere {
+  .griglia,
+  .griglia-opere,
+  .gallerie {
     grid-template-columns: 1fr;
+  }
+
+  .griglia,
+  .griglia-opere {
     gap: 30px;
   }
-}
 
-/* Pagina di ingresso alle gallerie */
-
-main:has(.gallerie) {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 55px 24px 80px;
-}
-
-main:has(.gallerie) h2 {
-  font-size: 38px;
-  font-weight: normal;
-  margin: 0 0 12px;
-}
-
-.introduzione {
-  color: #777;
-  line-height: 1.7;
-  margin-bottom: 45px;
-}
-
-.gallerie {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px;
-}
-
-.galleria {
-  display: block;
-  padding: 30px;
-  border: 1px solid #e8e8e8;
-  color: #222;
-  text-decoration: none;
-  transition: border-color 0.2s;
-}
-
-.galleria:hover {
-  border-color: #888;
-}
-
-.galleria h3 {
-  font-size: 25px;
-  font-weight: normal;
-  margin: 0 0 14px;
-}
-
-.galleria p {
-  color: #777;
-  font-size: 15px;
-  line-height: 1.7;
-  margin: 0;
-}
-
-.freccia {
-  display: block;
-  margin-top: 25px;
-  font: 12px Arial, sans-serif;
-  letter-spacing: 1px;
-}
-
-@media (max-width: 600px) {
   main:has(.gallerie) {
     padding: 35px 16px 55px;
   }
@@ -335,47 +415,11 @@ main:has(.gallerie) h2 {
     font-size: 32px;
   }
 
-  .gallerie {
-    grid-template-columns: 1fr;
-  }
-
   .galleria {
     padding: 24px;
   }
-}
 
-/* Correzione immagini della galleria Visioni */
-.griglia-opere figure {
-  min-width: 0;
-  margin: 0;
-}
-
-.griglia-opere img {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-}
-
-/* Didascalie uniformi in tutte le gallerie */
-.griglia figcaption,
-.griglia-opere figcaption {
-  margin-top: 13px;
-  font-family: Arial, sans-serif;
-  font-size: 15px;
-  font-weight: bold;
-  color: #333;
-}
-
-.griglia figcaption small,
-.griglia-opere figcaption small {
-  display: block;
-  margin-top: 6px;
-  font-family: Arial, sans-serif;
-  font-size: 12px;
-  font-weight: normal;
-  line-height: 1.5;
-  color: #777;
+  #visualizzatore {
+    padding: 35px 15px;
+  }
 }
