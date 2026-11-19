@@ -5,156 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Visioni – Pierangelo Rosati</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      padding: 40px;
-      background: #fff;
-      color: #222;
-      font-family: Georgia, serif;
-    }
-
-    header {
-      max-width: 1100px;
-      margin: 0 auto 55px;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 32px;
-      font-weight: normal;
-    }
-
-    header p {
-      margin-top: 12px;
-      color: #666;
-      font-size: 15px;
-    }
-
-    header nav {
-      display: flex;
-      align-items: flex-start;
-      gap: 24px;
-      margin-top: 24px;
-    }
-
-    header nav a {
-      color: #333;
-      text-decoration: none;
-      font: 11px Arial, sans-serif;
-      letter-spacing: 2px;
-    }
-
-    header nav a:hover {
-      text-decoration: underline;
-    }
-
-    main {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .galleria {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 50px 35px;
-    }
-
-    .opera {
-      margin: 0;
-    }
-
-
-.opera img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  height: auto;
-  object-fit: cover;
-  cursor: pointer;
-}
-
-  figcaption {
-  margin-top: 13px;
-  font-size: 16px;
-}
-
-figcaption small {
-  display: block;
-  margin-top: 6px;
-  color: #777;
-  font-size: 12px;
-}
-
-    .segnaposto {
-      min-height: 180px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid #e5e5e5;
-      color: #aaa;
-      font: 11px Arial, sans-serif;
-      letter-spacing: 2px;
-    }
-
-    .segnaposto figcaption {
-      margin: 0;
-    }
-
-    #ingrandimento {
-      display: none;
-      position: fixed;
-      inset: 0;
-      z-index: 1000;
-      background: rgba(0, 0, 0, 0.92);
-      align-items: center;
-      justify-content: center;
-      padding: 30px;
-      cursor: pointer;
-    }
-
-    #ingrandimento img {
-      max-width: 95%;
-      max-height: 90vh;
-      object-fit: contain;
-    }
-
-    #chiudi {
-      position: absolute;
-      top: 18px;
-      right: 28px;
-      color: white;
-      font: 32px Arial, sans-serif;
-    }
-
-    @media (max-width: 700px) {
-      body {
-        padding: 24px 18px;
-      }
-
-      header {
-        margin-bottom: 40px;
-      }
-
-      header h1 {
-        font-size: 27px;
-      }
-
-      .galleria {
-        grid-template-columns: 1fr;
-        gap: 35px;
-      }
-
-      .segnaposto {
-        min-height: 120px;
-      }
-    }
-  </style>
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -162,8 +12,8 @@ figcaption small {
 <body>
 
   <header>
-    <h1>Visioni</h1>
-    <p>Immagini, forme e simboli oltre la figura umana.</p>
+    <h1>PIERANGELO ROSATI</h1>
+    <p>Pittura · Disegno · Ricerca visiva</p>
 
     <nav>
       <a href="index.html">HOME</a>
@@ -172,147 +22,174 @@ figcaption small {
   </header>
 
   <main>
-    <div class="galleria">
+    <h2>Visioni</h2>
 
-      <figure class="opera">
-        <img src="pazzi.jpg"
-             alt="La congiura dei Pazzi"
-             onclick="ingrandisci(this)">
-<figcaption>
-  La congiura dei Pazzi
-  <small>2024 · acrilici su carta · 50 x 700 cm</small>
-</figcaption>
-      </figure>
+    <p class="introduzione">
+      Immagini, forme e simboli oltre la figura umana.
+    </p>
 
-      <figure class="opera">
-        <img src="torre.jpg"
-             alt="La torre"
-             onclick="ingrandisci(this)">
-<figcaption>
-  La torre
-  <small>2024 · acrilici su carta · 21 x 29.7 cm</small>
-</figcaption>
+    <div class="griglia">
+
+      <figure>
+        <img class="ingrandibile" src="pazzi.jpg"
+             alt="La congiura dei Pazzi">
+        <figcaption>
+          La congiura dei Pazzi
+          <small>2024 · acrilici su carta · 50 x 700 cm</small>
+        </figcaption>
       </figure>
 
-            <figure class="opera">
-        <img src="barbagianni.jpg"
-             alt="Barbagianni"
-             onclick="ingrandisci(this)">
-<figcaption>
-  Barbagianni
-  <small>2024 · inchiostro su carta · 29.7 x 21 cm</small>
-</figcaption>
-      </figure>
-      
-      <figure class="opera">
-        <img src="pescecane.jpg"
-             alt="Il pescecane"
-             onclick="ingrandisci(this)">
-<figcaption>
-  Il pescecane
-  <small>2025 · inchiostro su carta · 29.7 x 21 cm</small>
-</figcaption>
+      <figure>
+        <img class="ingrandibile" src="torre.jpg"
+             alt="La torre">
+        <figcaption>
+          La torre
+          <small>2024 · acrilici su carta · 21 x 29.7 cm</small>
+        </figcaption>
       </figure>
 
-      <figure class="opera">
-        <img src="ulisse.jpg"
-             alt="Ritorno a Itaca"
-             onclick="ingrandisci(this)">
-<figcaption>
-  Ritorno a Itaca
-  <small>2026 · inchiostro su carta · 21 x 29.7 cm</small>
-</figcaption>
+      <figure>
+        <img class="ingrandibile" src="barbagianni.jpg"
+             alt="Barbagianni">
+        <figcaption>
+          Barbagianni
+          <small>2024 · inchiostro su carta · 29.7 x 21 cm</small>
+        </figcaption>
       </figure>
 
-            <figure class="opera">
-        <img src="sirena.jpg"
-             alt="La sirena"
-             onclick="ingrandisci(this)">
-<figcaption>
-  La sirena
-  <small>2026 · acrilici su carta · 21 x 29.7 cm</small>
-</figcaption>
+      <figure>
+        <img class="ingrandibile" src="pescecane.jpg"
+             alt="Il pescecane">
+        <figcaption>
+          Il pescecane
+          <small>2025 · inchiostro su carta · 29.7 x 21 cm</small>
+        </figcaption>
       </figure>
 
-            <figure class="opera">
-        <img src="prigioniero.jpg"
-             alt="Il prigioniero"
-             onclick="ingrandisci(this)">
-<figcaption>
-  Il prigioniero
-  <small>2025 · inchiostro su corteccia d'albero · 10 x 13 cm</small>
-</figcaption>
+      <figure>
+        <img class="ingrandibile" src="ulisse.jpg"
+             alt="Ritorno a Itaca">
+        <figcaption>
+          Ritorno a Itaca
+          <small>2026 · inchiostro su carta · 21 x 29.7 cm</small>
+        </figcaption>
       </figure>
 
-            <figure class="opera">
-        <img src="mostri.jpg"
-             alt="Mostri marini"
-             onclick="ingrandisci(this)">
-<figcaption>
-  Mostri marini
-  <small>2026 · inchiostro su canne</small>
-</figcaption>
+      <figure>
+        <img class="ingrandibile" src="sirena.jpg"
+             alt="La sirena">
+        <figcaption>
+          La sirena
+          <small>2026 · acrilici su carta · 21 x 29.7 cm</small>
+        </figcaption>
       </figure>
 
-            <figure class="opera">
-        <img src="serpe.jpg"
-             alt="Serpe"
-             onclick="ingrandisci(this)">
-<figcaption>
-  Serpe
-  <small>2025 · inchiostro su legno</small>
-</figcaption>
-      </figure>
-      
-            <figure class="opera">
-        <img src="pietra.jpg"
-             alt="Viris lapideis"
-             onclick="ingrandisci(this)">
-<figcaption>
-  Viris lapideis
-  <small>2026 · inchiostro su pietra · 20 x 12 cm</small>
-</figcaption>
+      <figure>
+        <img class="ingrandibile" src="prigioniero.jpg"
+             alt="Il prigioniero">
+        <figcaption>
+          Il prigioniero
+          <small>2025 · inchiostro su corteccia d'albero · 10 x 13 cm</small>
+        </figcaption>
       </figure>
 
-                  <figure class="opera">
-        <img src="aquila.jpg"
-             alt="L'aquila nobile"
-             onclick="ingrandisci(this)">
-<figcaption>
-  L'aquila nobile
-  <small>2026 · inchiostro e acrilici su carta · 21 x 29.7 cm</small>
-</figcaption>
+      <figure>
+        <img class="ingrandibile" src="mostri.jpg"
+             alt="Mostri marini">
+        <figcaption>
+          Mostri marini
+          <small>2026 · inchiostro su canne</small>
+        </figcaption>
       </figure>
 
-                  <figure class="opera">
-        <img src="memoriaselvatica.jpg"
-             alt="La memoria selvatica"
-             onclick="ingrandisci(this)">
-<figcaption>
-  La memoria selvatica
-  <small>2022 · acrilici su carta · 60 x 80 cm</small>
-</figcaption>
+      <figure>
+        <img class="ingrandibile" src="serpe.jpg"
+             alt="Serpe">
+        <figcaption>
+          Serpe
+          <small>2025 · inchiostro su legno</small>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img class="ingrandibile" src="pietra.jpg"
+             alt="Viris lapideis">
+        <figcaption>
+          Viris lapideis
+          <small>2026 · inchiostro su pietra · 20 x 12 cm</small>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img class="ingrandibile" src="aquila.jpg"
+             alt="L'aquila nobile">
+        <figcaption>
+          L'aquila nobile
+          <small>2026 · inchiostro e acrilici su carta · 21 x 29.7 cm</small>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img class="ingrandibile" src="memoriaselvatica.jpg"
+             alt="La memoria selvatica">
+        <figcaption>
+          La memoria selvatica
+          <small>2022 · acrilici su carta · 60 x 80 cm</small>
+        </figcaption>
       </figure>
 
     </div>
   </main>
 
-  <div id="ingrandimento" onclick="chiudiIngrandimento()">
-    <span id="chiudi">&times;</span>
-    <img id="immagineGrande" src="" alt="">
+  <footer>
+    <p>© Pierangelo Rosati</p>
+  </footer>
+
+  <div id="visualizzatore" hidden>
+    <button id="chiudi" aria-label="Chiudi ingrandimento">&times;</button>
+    <img id="immagine-grande" src="" alt="">
   </div>
 
   <script>
-    function ingrandisci(immagine) {
-      const overlay = document.getElementById('ingrandimento');
-      document.getElementById('immagineGrande').src = immagine.src;
-      document.getElementById('immagineGrande').alt = immagine.alt;
-      overlay.style.display = 'flex';
+    const visualizzatore = document.getElementById('visualizzatore');
+    const immagineGrande = document.getElementById('immagine-grande');
+    const pulsanteChiudi = document.getElementById('chiudi');
+
+    function apriIngrandimento(immagine) {
+      immagineGrande.src = immagine.src;
+      immagineGrande.alt = immagine.alt;
+      visualizzatore.hidden = false;
     }
 
     function chiudiIngrandimento() {
-      document.getElementById('ingrandimento').style.display = 'none';
+      visualizzatore.hidden = true;
+      immagineGrande.src = '';
     }
+
+    document.querySelectorAll('.ingrandibile').forEach(function(immagine) {
+      immagine.addEventListener('click', function() {
+        apriIngrandimento(immagine);
+      });
+
+      immagine.addEventListener('keydown', function(evento) {
+        if (evento.key === 'Enter' || evento.key === ' ') {
+          evento.preventDefault();
+          apriIngrandimento(immagine);
+        }
+      });
+
+      immagine.tabIndex = 0;
+      immagine.setAttribute('role', 'button');
+      immagine.setAttribute('aria-label', 'Ingrandisci: ' + immagine.alt);
+    });
+
+    pulsanteChiudi.addEventListener('click', chiudiIngrandimento);
+
+    visualizzatore.addEventListener('click', function(evento) {
+      if (evento.target === visualizzatore) {
+        chiudiIngrandimento();
+      }
+    });
 
     document.addEventListener('keydown', function(evento) {
       if (evento.key === 'Escape') {
@@ -323,3 +200,4 @@ figcaption small {
 
 </body>
 </html>
+
