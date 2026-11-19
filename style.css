@@ -358,3 +358,10 @@ main:has(.gallerie) h2 {
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+.griglia-opere figcaption small {
+  display: block;
+  margin-top: 6px;
+  color: #777;
+  font-size: 12px;
+}
