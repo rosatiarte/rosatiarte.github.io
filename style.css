@@ -125,7 +125,9 @@ main {
 .opera img {
   display: block;
   width: 100%;
+  aspect-ratio: 4 / 3;
   height: auto;
+  object-fit: cover;
 }
 
 figcaption {
