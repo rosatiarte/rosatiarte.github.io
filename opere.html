@@ -163,8 +163,15 @@
     </div>
   </main>
 
-  <footer>
-    © Pierangelo Rosati
-  </footer>
+
+<footer>
+  <p>© Pierangelo Rosati</p>
+  <div class="contatti">
+    <a href="https://www.instagram.com/pierangelorosati/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a href="https://www.artmajeur.com/pierangelo-rosati" target="_blank" rel="noopener noreferrer">Artmajeur</a>
+    <a href="mailto:pierangelorosati@yahoo.com">Email</a>
+    <a href="#" onclick="if (navigator.share) { navigator.share({title: document.title, url: window.location.href}); } else if (navigator.clipboard) { navigator.clipboard.writeText(window.location.href).then(() => alert('Link copiato!')); } else { prompt('Copia questo indirizzo:', window.location.href); } return false;">Condividi</a>
+  </div>
+</footer>
 </body>
 </html>
