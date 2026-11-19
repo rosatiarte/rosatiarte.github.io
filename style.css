@@ -344,3 +344,17 @@ main:has(.gallerie) h2 {
   }
 }
 
+/* Correzione immagini della galleria Visioni */
+.griglia-opere figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.griglia-opere img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
