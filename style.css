@@ -1,1 +1,267 @@
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: #222;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+header {
+  padding: 34px 6%;
+  border-bottom: 1px solid #eee;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: normal;
+  letter-spacing: 2px;
+}
+
+header p {
+  margin: 8px 0 0;
+  font: 11px Arial, sans-serif;
+  letter-spacing: 3px;
+  color: #777;
+  text-transform: uppercase;
+}
+
+header nav {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+header nav a {
+  color: #333;
+  text-decoration: none;
+  font: 11px Arial, sans-serif;
+  letter-spacing: 2px;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+header nav .menu-opere {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+header nav .menu-opere > a {
+  display: block;
+  padding: 0;
+  line-height: normal;
+}
+
+.menu-opere {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.sottomenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -12px;
+  padding-top: 12px;
+  min-width: 175px;
+  background: #fff;
+  z-index: 100;
+}
+
+.sottomenu a {
+  display: block;
+  padding: 12px;
+  color: #333;
+  font: 11px Arial, sans-serif;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.menu-opere:hover .sottomenu,
+.menu-opere:focus-within .sottomenu {
+  display: block;
+}
+
+.menu-opere > a {
+  display: inline-block;
+  padding-bottom: 12px;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 55px 24px;
+}
+
+.intro {
+  margin-bottom: 32px;
+}
+
+.intro h2 {
+  font-size: clamp(30px, 5vw, 48px);
+  font-weight: normal;
+  margin: 0 0 12px;
+}
+
+.intro p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #666;
+}
+
+.opera {
+  margin: 0;
+}
+
+.opera img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+figcaption {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #777;
+}
+
+.presentazione {
+  max-width: 800px;
+  margin: 80px auto;
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+.presentazione h2 {
+  margin-bottom: 28px;
+  font-size: 25px;
+  font-weight: normal;
+}
+
+.epigrafe {
+  max-width: 620px;
+  margin: 18px 0 30px;
+  padding: 0;
+  border: none;
+  text-align: left;
+  color: #777;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.epigrafe p {
+  margin: 0 0 5px;
+}
+
+.epigrafe cite {
+  display: block;
+  font-size: 0.8rem;
+  font-style: normal;
+  color: #999;
+}
+
+.galleria {
+  margin: 70px 0;
+}
+
+.galleria h2 {
+  font-size: 32px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.galleria-intro {
+  color: #777;
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+
+.griglia-opere {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.opera-card {
+  margin: 0;
+}
+
+.opera-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.opera-card figcaption {
+  margin-top: 12px;
+  color: #222;
+  font-size: 16px;
+}
+
+.opera-card figcaption small {
+  display: block;
+  margin-top: 6px;
+  color: #777;
+  font-size: 12px;
+}
+
+footer {
+  border-top: 1px solid #eee;
+  padding: 28px 6%;
+  color: #777;
+  font: 12px Arial, sans-serif;
+  text-align: center;
+}
+
+footer p {
+  margin: 0 0 18px;
+}
+
+.contatti {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.contatti a {
+  color: #555;
+  text-decoration: none;
+  font: 11px Arial, sans-serif;
+  letter-spacing: 1px;
+}
+
+.contatti a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 25px 20px;
+  }
+
+  main {
+    padding: 35px 16px;
+  }
+
+  .intro h2 {
+    font-size: 32px;
+  }
+
+  .griglia-opere {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
