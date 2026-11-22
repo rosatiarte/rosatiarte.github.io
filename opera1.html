@@ -5,13 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Opere — Pierangelo Rosati</title>
-  <meta name="description" content="Due percorsi nella ricerca pittorica di Pierangelo Rosati: La figura umana e Visioni.">
+  <meta name="description" content="Una selezione di opere di Pierangelo Rosati, tra figura umana e visioni.">
   <link rel="stylesheet" href="style.css">
+
   <style>
     .scelta-opere {
-      max-width: 1100px;
+      max-width: 1000px;
       margin: 0 auto;
-      padding: 55px 24px 80px;
+      padding: 45px 24px 70px;
     }
 
     .scelta-opere h1 {
@@ -22,16 +23,16 @@
 
     .sottotitolo-opere {
       max-width: 650px;
-      font-size: 18px;
+      font-size: 17px;
       line-height: 1.7;
       color: #555;
-      margin-bottom: 48px;
+      margin: 0 0 42px;
     }
 
     .percorsi-opere {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 34px;
+      gap: 48px;
     }
 
     .percorso-opera {
@@ -43,19 +44,21 @@
     .percorso-opera img {
       display: block;
       width: 100%;
-      height: 340px;
-      object-fit: cover;
+      max-width: 280px;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+      margin: 0 auto;
       transition: opacity 0.25s;
     }
 
     .percorso-opera:hover img {
-      opacity: 0.85;
+      opacity: 0.82;
     }
 
     .percorso-opera h2 {
       font-size: 25px;
       font-weight: normal;
-      margin: 22px 0 10px;
+      margin: 24px 0 10px;
     }
 
     .percorso-opera p {
@@ -75,7 +78,7 @@
 
     @media (max-width: 650px) {
       .scelta-opere {
-        padding-top: 38px;
+        padding-top: 35px;
       }
 
       .scelta-opere h1 {
@@ -84,18 +87,16 @@
 
       .percorsi-opere {
         grid-template-columns: 1fr;
-        gap: 42px;
+        gap: 38px;
       }
 
       .percorso-opera img {
-        height: auto;
-        max-height: 420px;
-        object-fit: contain;
-        background: #f7f7f7;
+        max-width: 260px;
       }
     }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -116,8 +117,8 @@
   <div class="percorsi-opere">
 
     <a class="percorso-opera" href="figura-umana.html">
-      <img src="apertura.webp"
-           alt="Tre figure urlanti su uno sfondo giallo e blu">
+      <img src="arco.webp"
+           alt="Opera di Pierangelo Rosati">
       <h2>La figura umana</h2>
       <p>
         Il corpo come territorio inquieto, soglia tra identità individuale
@@ -127,8 +128,8 @@
     </a>
 
     <a class="percorso-opera" href="visioni.html">
-      <img src="memoriaselvatica.webp"
-           alt="La memoria selvatica, opera di Pierangelo Rosati">
+      <img src="lumacone.webp"
+           alt="Opera di Pierangelo Rosati">
       <h2>Visioni</h2>
       <p>
         Immagini e presenze che affiorano da una dimensione primordiale,
