@@ -10,6 +10,103 @@
 
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="style.css">
+  
+<style>
+  .scelta-opere {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 45px 24px 70px;
+  }
+
+  .scelta-opere h1 {
+    font-size: 36px;
+    font-weight: normal;
+    margin: 0 0 18px;
+  }
+
+  .sottotitolo-opere {
+    max-width: 650px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin: 0 0 45px;
+  }
+
+  .percorso-opera {
+    display: grid;
+    grid-template-columns: 140px minmax(0, 1fr);
+    align-items: center;
+    gap: 30px;
+    padding: 28px 0;
+    border-top: 1px solid #e8e8e8;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .percorso-opera img {
+    display: block;
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    margin: 0;
+    transition: opacity 0.25s;
+  }
+
+  .percorso-opera:hover img {
+    opacity: 0.8;
+  }
+
+  .percorso-opera h2 {
+    font-size: 25px;
+    font-weight: normal;
+    margin: 0 0 12px;
+  }
+
+  .percorso-opera p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #555;
+    margin: 0;
+  }
+
+  .percorso-opera .entra-opere {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 600px) {
+    .scelta-opere {
+      padding: 35px 20px 55px;
+    }
+
+    .scelta-opere h1 {
+      font-size: 32px;
+    }
+
+    .percorso-opera {
+      grid-template-columns: 100px minmax(0, 1fr);
+      gap: 18px;
+      padding: 24px 0;
+    }
+
+    .percorso-opera img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .percorso-opera h2 {
+      font-size: 21px;
+    }
+
+    .percorso-opera p {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+  }
+</style>
 
   <!-- Anteprima per la condivisione -->
   <meta property="og:type" content="website">
