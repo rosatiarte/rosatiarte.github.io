@@ -1,111 +1,52 @@
-```html
+
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Opere | Pierangelo Rosati</title>
-  <meta name="description" content="Una selezione di opere di Pierangelo Rosati, tra figura umana e visioni.">
 
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="style.css">
 
   <style>
-    .scelta-opere {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 45px 24px 70px;
+    .galleria-con-immagine {
+      display: flex;
+      align-items: center;
+      gap: 20px;
     }
 
-    .scelta-opere > h1 {
-      font-size: 36px;
-      font-weight: normal;
-      margin: 0 0 18px;
-    }
-
-    .sottotitolo-opere {
-      max-width: 650px;
-      font-size: 16px;
-      line-height: 1.8;
-      color: #555;
-      margin: 0 0 35px;
-    }
-
-    .percorsi-opere {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 40px;
-      margin-top: 10px;
-    }
-
-    .percorso-opera {
+    .galleria-con-immagine img {
       display: block;
-      min-width: 0;
-      color: inherit;
-      text-decoration: none;
-      border-top: 1px solid #e8e8e8;
-      padding-top: 25px;
-    }
-
-    .percorso-opera img {
-      display: block;
-      width: 100%;
-      max-width: 240px;
-      aspect-ratio: 1;
+      width: 85px;
+      height: 85px;
       object-fit: contain;
-      margin: 0 0 22px;
-      transition: opacity 0.25s;
-    }
-
-    .percorso-opera:hover img {
-      opacity: 0.8;
-    }
-
-    .percorso-opera h2 {
-      font-size: 24px;
-      font-weight: normal;
-      margin: 0 0 10px;
-    }
-
-    .percorso-opera p {
-      font-size: 15px;
-      line-height: 1.7;
-      color: #555;
+      flex-shrink: 0;
       margin: 0;
     }
 
-    @media (max-width: 600px) {
-      .scelta-opere {
-        padding: 35px 20px 55px;
+    .galleria-testo {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .galleria-testo h3 {
+      margin-top: 0;
+    }
+
+    @media (max-width: 500px) {
+      .galleria-con-immagine {
+        gap: 12px;
       }
 
-      .scelta-opere > h1 {
-        font-size: 32px;
-      }
-
-      .percorsi-opere {
-        gap: 20px;
-      }
-
-      .percorso-opera {
-        padding-top: 18px;
-      }
-
-      .percorso-opera img {
-        margin-bottom: 16px;
-      }
-
-      .percorso-opera h2 {
-        font-size: 19px;
-      }
-
-      .percorso-opera p {
-        font-size: 13px;
+      .galleria-con-immagine img {
+        width: 65px;
+        height: 65px;
       }
     }
   </style>
 
+  <!-- Anteprima per la condivisione -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="it_IT">
   <meta property="og:title" content="Opere — Pierangelo Rosati">
@@ -118,50 +59,50 @@
 </head>
 
 <body>
+  <header>
+    <h1>PIERANGELO ROSATI</h1>
+    <p>Pittura · Disegno · Ricerca visiva</p>
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="opere.html">OPERE</a>
+    </nav>
+  </header>
 
-<header>
-  <h1>PIERANGELO ROSATI</h1>
-  <p>Pittura · Disegno · Ricerca visiva</p>
-  <nav>
-    <a href="index.html">HOME</a>
-    <a href="opere.html">OPERE</a>
-  </nav>
-</header>
+  <main>
+    <h2>Opere</h2>
+    <p class="introduzione">
+      Due percorsi nella ricerca pittorica e visiva, attraverso una selezione di opere
+    </p>
 
-<main class="scelta-opere">
-  <h1>Opere</h1>
+    <div class="gallerie">
+      <a class="galleria galleria-con-immagine" href="figura-umana.html">
+        <img src="arco.webp" alt="Opera della serie La figura umana">
+        <div class="galleria-testo">
+          <h3>La figura umana</h3>
+          <p>Volti, corpi e presenza</p>
+          <span class="freccia">ESPLORA →</span>
+        </div>
+      </a>
 
-  <p class="sottotitolo-opere">
-    Una selezione di opere tra figura umana e visioni.
-  </p>
+      <a class="galleria galleria-con-immagine" href="visioni.html">
+        <img src="lumacone.webp" alt="Opera della serie Visioni">
+        <div class="galleria-testo">
+          <h3>Visioni</h3>
+          <p>Immagini, forme e simboli</p>
+          <span class="freccia">ESPLORA →</span>
+        </div>
+      </a>
+    </div>
+  </main>
 
-  <div class="percorsi-opere">
-
-    <a class="percorso-opera" href="figura-umana.html">
-      <img src="arco.webp" alt="La figura umana">
-      <h2>La figura umana</h2>
-      <p>Volti, corpi e presenza</p>
-    </a>
-
-    <a class="percorso-opera" href="visioni.html">
-      <img src="lumacone.webp" alt="Visioni">
-      <h2>Visioni</h2>
-      <p>Immagini, forme e simboli</p>
-    </a>
-
-  </div>
-</main>
-
-<footer>
-  <p>© Pierangelo Rosati</p>
-  <div class="contatti">
-    <a href="https://www.instagram.com/pierangelorosati/" target="_blank" rel="noopener noreferrer">Instagram</a>
-    <a href="https://www.artmajeur.com/pierangelo-rosati" target="_blank" rel="noopener noreferrer">Artmajeur</a>
-    <a href="mailto:pierangelorosati@yahoo.com">Email</a>
-    <a href="#" onclick="if (navigator.share) { navigator.share({title: document.title, url: window.location.href}); } else if (navigator.clipboard) { navigator.clipboard.writeText(window.location.href).then(() => alert('Link copiato!')); } else { prompt('Copia questo indirizzo:', window.location.href); } return false;">Condividi</a>
-  </div>
-</footer>
-
+  <footer>
+    <p>© Pierangelo Rosati</p>
+    <div class="contatti">
+      <a href="https://www.instagram.com/pierangelorosati/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://www.artmajeur.com/pierangelo-rosati" target="_blank" rel="noopener noreferrer">Artmajeur</a>
+      <a href="mailto:pierangelorosati@yahoo.com">Email</a>
+      <a href="#" onclick="if (navigator.share) { navigator.share({title: document.title, url: window.location.href}); } else if (navigator.clipboard) { navigator.clipboard.writeText(window.location.href).then(() => alert('Link copiato!')); } else { prompt('Copia questo indirizzo:', window.location.href); } return false;">Condividi</a>
+    </div>
+  </footer>
 </body>
 </html>
-```
