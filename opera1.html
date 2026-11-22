@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="it">
 
@@ -10,107 +10,102 @@
 
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="style.css">
-  
-<style>
-  .scelta-opere {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 45px 24px 70px;
-  }
 
-  .scelta-opere h1 {
-    font-size: 36px;
-    font-weight: normal;
-    margin: 0 0 18px;
-  }
-
-  .sottotitolo-opere {
-    max-width: 650px;
-    font-size: 16px;
-    line-height: 1.8;
-    color: #555;
-    margin: 0 0 45px;
-  }
-
-  @media (max-width: 600px) {
+  <style>
     .scelta-opere {
-      padding: 35px 20px 55px;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 45px 24px 70px;
     }
 
-    .scelta-opere h1 {
-      font-size: 32px;
+    .scelta-opere > h1 {
+      font-size: 36px;
+      font-weight: normal;
+      margin: 0 0 18px;
     }
 
-```css
-.percorsi-opere {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 40px;
-  margin-top: 10px;
-}
+    .sottotitolo-opere {
+      max-width: 650px;
+      font-size: 16px;
+      line-height: 1.8;
+      color: #555;
+      margin: 0 0 35px;
+    }
 
-.percorso-opera {
-  display: block;
-  color: inherit;
-  text-decoration: none;
-  border-top: 1px solid #e8e8e8;
-  padding-top: 25px;
-}
+    .percorsi-opere {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 40px;
+      margin-top: 10px;
+    }
 
-.percorso-opera img {
-  display: block;
-  width: 100%;
-  max-width: 240px;
-  aspect-ratio: 1;
-  object-fit: contain;
-  margin: 0 0 22px;
-  transition: opacity 0.25s;
-}
+    .percorso-opera {
+      display: block;
+      min-width: 0;
+      color: inherit;
+      text-decoration: none;
+      border-top: 1px solid #e8e8e8;
+      padding-top: 25px;
+    }
 
-.percorso-opera:hover img {
-  opacity: 0.8;
-}
+    .percorso-opera img {
+      display: block;
+      width: 100%;
+      max-width: 240px;
+      aspect-ratio: 1;
+      object-fit: contain;
+      margin: 0 0 22px;
+      transition: opacity 0.25s;
+    }
 
-.percorso-opera h2 {
-  font-size: 24px;
-  font-weight: normal;
-  margin: 0 0 10px;
-}
+    .percorso-opera:hover img {
+      opacity: 0.8;
+    }
 
-.percorso-opera p {
-  font-size: 15px;
-  line-height: 1.7;
-  color: #555;
-  margin: 0;
-}
+    .percorso-opera h2 {
+      font-size: 24px;
+      font-weight: normal;
+      margin: 0 0 10px;
+    }
 
-@media (max-width: 600px) {
-  .percorsi-opere {
-    gap: 20px;
-  }
+    .percorso-opera p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #555;
+      margin: 0;
+    }
 
-  .percorso-opera {
-    padding-top: 18px;
-  }
+    @media (max-width: 600px) {
+      .scelta-opere {
+        padding: 35px 20px 55px;
+      }
 
-  .percorso-opera img {
-    margin-bottom: 16px;
-  }
+      .scelta-opere > h1 {
+        font-size: 32px;
+      }
 
-  .percorso-opera h2 {
-    font-size: 19px;
-  }
+      .percorsi-opere {
+        gap: 20px;
+      }
 
-  .percorso-opera p {
-    font-size: 13px;
-  }
-}
-```
-    
-  }
-</style>
+      .percorso-opera {
+        padding-top: 18px;
+      }
 
-  <!-- Anteprima per la condivisione -->
+      .percorso-opera img {
+        margin-bottom: 16px;
+      }
+
+      .percorso-opera h2 {
+        font-size: 19px;
+      }
+
+      .percorso-opera p {
+        font-size: 13px;
+      }
+    }
+  </style>
+
   <meta property="og:type" content="website">
   <meta property="og:locale" content="it_IT">
   <meta property="og:title" content="Opere — Pierangelo Rosati">
@@ -169,3 +164,4 @@
 
 </body>
 </html>
+```
