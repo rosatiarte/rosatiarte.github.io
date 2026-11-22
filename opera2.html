@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opere — Pierangelo Rosati</title>
+  <meta name="description" content="La ricerca pittorica di Pierangelo Rosati in due percorsi: figura umana e visioni.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .editoriale-opere {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 58px 24px 85px;
+    }
+
+    .editoriale-opere h1 {
+      font-size: 38px;
+      font-weight: normal;
+      margin: 0 0 28px;
+    }
+
+    .testo-editoriale {
+      max-width: 740px;
+      font-size: 17px;
+      line-height: 1.9;
+      color: #444;
+      margin-bottom: 58px;
+    }
+
+    .sezione-editoriale {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      align-items: center;
+      gap: 48px;
+      padding: 34px 0;
+      border-top: 1px solid #e5e5e5;
+    }
+
+    .sezione-editoriale:nth-of-type(even) .immagine-editoriale {
+      order: 2;
+    }
+
+    .immagine-editoriale {
+      display: block;
+      width: 100%;
+    }
+
+    .immagine-editoriale img {
+      display: block;
+      width: 100%;
+      max-height: 390px;
+      object-fit: contain;
+    }
+
+    .testo-sezione h2 {
+      font-size: 27px;
+      font-weight: normal;
+      margin: 0 0 18px;
+    }
+
+    .testo-sezione p {
+      font-size: 15px;
+      line-height: 1.9;
+      color: #555;
+      margin: 0 0 22px;
+    }
+
+    .link-editoriale {
+      color: #222;
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-bottom: 1px solid #999;
+      padding-bottom: 5px;
+    }
+
+    .link-editoriale:hover {
+      border-color: #222;
+    }
+
+    @media (max-width: 650px) {
+      .editoriale-opere {
+        padding-top: 38px;
+      }
+
+      .editoriale-opere h1 {
+        font-size: 32px;
+      }
+
+      .testo-editoriale {
+        margin-bottom: 38px;
+      }
+
+      .sezione-editoriale {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 28px 0;
+      }
+
+      .sezione-editoriale:nth-of-type(even) .immagine-editoriale {
+        order: 0;
+      }
+
+      .immagine-editoriale img {
+        max-height: 340px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="opere.html">OPERE</a>
+  </nav>
+</header>
+
+<main class="editoriale-opere">
+  <h1>Opere</h1>
+
+  <div class="testo-editoriale">
+    <p>
+      La ricerca pittorica di Pierangelo Rosati si muove tra il corpo
+      umano e le immagini di un mondo altro. Non categorie separate,
+      ma due direzioni di uno stesso interrogativo: ciò che affiora
+      in superficie e ciò che, più in profondità, continua a premerle
+      contro.
+    </p>
+  </div>
+
+  <section class="sezione-editoriale">
+    <a class="immagine-editoriale" href="figura-umana.html">
+      <img src="apertura.webp"
+           alt="Tre figure urlanti su uno sfondo giallo e blu">
+    </a>
+
+    <div class="testo-sezione">
+      <h2>La figura umana</h2>
+      <p>
+        Volti e corpi diventano luoghi di trasformazione, attraversati
+        da tensioni psichiche e simboliche. La figura non è soltanto
+        ciò che appare, ma una soglia tra il singolare e l'universale.
+      </p>
+      <a class="link-editoriale" href="figura-umana.html">
+        Entra nella galleria →
+      </a>
+    </div>
+  </section>
+
+  <section class="sezione-editoriale">
+    <a class="immagine-editoriale" href="visioni.html">
+      <img src="memoriaselvatica.webp"
+           alt="La memoria selvatica, opera di Pierangelo Rosati">
+    </a>
+
+    <div class="testo-sezione">
+      <h2>Visioni</h2>
+      <p>
+        Paesaggi interiori, presenze inattese e forme che sembrano
+        appartenere a un tempo remoto. Un immaginario in cui la natura
+        diventa memoria, enigma e possibilità di un nuovo inizio.
+      </p>
+      <a class="link-editoriale" href="visioni.html">
+        Entra nella galleria →
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© Pierangelo Rosati</p>
+</footer>
+
+</body>
+</html>
