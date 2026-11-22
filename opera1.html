@@ -32,51 +32,6 @@
     margin: 0 0 45px;
   }
 
-  .percorso-opera {
-    display: grid;
-    grid-template-columns: 140px minmax(0, 1fr);
-    align-items: center;
-    gap: 30px;
-    padding: 28px 0;
-    border-top: 1px solid #e8e8e8;
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .percorso-opera img {
-    display: block;
-    width: 140px;
-    height: 140px;
-    object-fit: contain;
-    margin: 0;
-    transition: opacity 0.25s;
-  }
-
-  .percorso-opera:hover img {
-    opacity: 0.8;
-  }
-
-  .percorso-opera h2 {
-    font-size: 25px;
-    font-weight: normal;
-    margin: 0 0 12px;
-  }
-
-  .percorso-opera p {
-    font-size: 15px;
-    line-height: 1.8;
-    color: #555;
-    margin: 0;
-  }
-
-  .percorso-opera .entra-opere {
-    display: inline-block;
-    margin-top: 15px;
-    font-size: 12px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-
   @media (max-width: 600px) {
     .scelta-opere {
       padding: 35px 20px 55px;
@@ -86,25 +41,72 @@
       font-size: 32px;
     }
 
-    .percorso-opera {
-      grid-template-columns: 100px minmax(0, 1fr);
-      gap: 18px;
-      padding: 24px 0;
-    }
+```css
+.percorsi-opere {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+  margin-top: 10px;
+}
 
-    .percorso-opera img {
-      width: 100px;
-      height: 100px;
-    }
+.percorso-opera {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  border-top: 1px solid #e8e8e8;
+  padding-top: 25px;
+}
 
-    .percorso-opera h2 {
-      font-size: 21px;
-    }
+.percorso-opera img {
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  aspect-ratio: 1;
+  object-fit: contain;
+  margin: 0 0 22px;
+  transition: opacity 0.25s;
+}
 
-    .percorso-opera p {
-      font-size: 14px;
-      line-height: 1.6;
-    }
+.percorso-opera:hover img {
+  opacity: 0.8;
+}
+
+.percorso-opera h2 {
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0 0 10px;
+}
+
+.percorso-opera p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .percorsi-opere {
+    gap: 20px;
+  }
+
+  .percorso-opera {
+    padding-top: 18px;
+  }
+
+  .percorso-opera img {
+    margin-bottom: 16px;
+  }
+
+  .percorso-opera h2 {
+    font-size: 19px;
+  }
+
+  .percorso-opera p {
+    font-size: 13px;
+  }
+}
+```
+    
   }
 </style>
 
@@ -135,33 +137,24 @@
   <h1>Opere</h1>
 
   <p class="sottotitolo-opere">
-    Due percorsi attraverso una ricerca pittorica in cui la figura,
-    la materia e l'immaginazione diventano luoghi di tensione e trasformazione.
+    Una selezione di opere tra figura umana e visioni.
   </p>
 
-  <a class="percorso-opera" href="figura-umana.html">
-    <img src="arco.webp" alt="Opera di Pierangelo Rosati">
-    <div>
-      <h2>La figura umana</h2>
-      <p>
-        Il corpo come territorio inquieto, soglia tra identità individuale
-        e dimensione universale dell'esistenza.
-      </p>
-      <span class="entra-opere">Esplora la galleria →</span>
-    </div>
-  </a>
+  <div class="percorsi-opere">
 
-  <a class="percorso-opera" href="visioni.html">
-    <img src="lumacone.webp" alt="Opera di Pierangelo Rosati">
-    <div>
+    <a class="percorso-opera" href="figura-umana.html">
+      <img src="arco.webp" alt="La figura umana">
+      <h2>La figura umana</h2>
+      <p>Volti, corpi e presenza</p>
+    </a>
+
+    <a class="percorso-opera" href="visioni.html">
+      <img src="lumacone.webp" alt="Visioni">
       <h2>Visioni</h2>
-      <p>
-        Immagini e presenze che affiorano da una dimensione primordiale,
-        sospesa tra natura, sogno e memoria.
-      </p>
-      <span class="entra-opere">Esplora la galleria →</span>
-    </div>
-  </a>
+      <p>Immagini, forme e simboli</p>
+    </a>
+
+  </div>
 </main>
 
 <footer>
