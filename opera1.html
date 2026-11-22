@@ -10,88 +10,96 @@
 
   <style>
     .scelta-opere {
-      max-width: 1000px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 45px 24px 70px;
     }
 
     .scelta-opere h1 {
-      font-size: 38px;
+      font-size: 36px;
       font-weight: normal;
       margin: 0 0 18px;
     }
 
     .sottotitolo-opere {
       max-width: 650px;
-      font-size: 17px;
-      line-height: 1.7;
+      font-size: 16px;
+      line-height: 1.8;
       color: #555;
-      margin: 0 0 42px;
-    }
-
-    .percorsi-opere {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 48px;
+      margin: 0 0 45px;
     }
 
     .percorso-opera {
-      display: block;
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      align-items: center;
+      gap: 32px;
+      padding: 28px 0;
+      border-top: 1px solid #e8e8e8;
       color: inherit;
       text-decoration: none;
     }
 
     .percorso-opera img {
       display: block;
-      width: 100%;
-      max-width: 280px;
-      aspect-ratio: 1 / 1;
+      width: 170px;
+      height: 170px;
       object-fit: contain;
-      margin: 0 auto;
       transition: opacity 0.25s;
     }
 
     .percorso-opera:hover img {
-      opacity: 0.82;
+      opacity: 0.8;
     }
 
     .percorso-opera h2 {
       font-size: 25px;
       font-weight: normal;
-      margin: 24px 0 10px;
+      margin: 0 0 12px;
     }
 
     .percorso-opera p {
       font-size: 15px;
-      line-height: 1.7;
+      line-height: 1.8;
       color: #555;
       margin: 0;
     }
 
     .entra-opere {
       display: inline-block;
-      margin-top: 17px;
-      font-size: 13px;
+      margin-top: 15px;
+      font-size: 12px;
       letter-spacing: 1px;
       text-transform: uppercase;
     }
 
-    @media (max-width: 650px) {
+    @media (max-width: 600px) {
       .scelta-opere {
-        padding-top: 35px;
+        padding: 35px 20px 55px;
       }
 
       .scelta-opere h1 {
         font-size: 32px;
       }
 
-      .percorsi-opere {
-        grid-template-columns: 1fr;
-        gap: 38px;
+      .percorso-opera {
+        grid-template-columns: 105px 1fr;
+        gap: 20px;
+        padding: 24px 0;
       }
 
       .percorso-opera img {
-        max-width: 260px;
+        width: 105px;
+        height: 105px;
+      }
+
+      .percorso-opera h2 {
+        font-size: 21px;
+      }
+
+      .percorso-opera p {
+        font-size: 14px;
+        line-height: 1.6;
       }
     }
   </style>
@@ -114,31 +122,29 @@
     la materia e l'immaginazione diventano luoghi di tensione e trasformazione.
   </p>
 
-  <div class="percorsi-opere">
-
-    <a class="percorso-opera" href="figura-umana.html">
-      <img src="arco.webp"
-           alt="Opera di Pierangelo Rosati">
+  <a class="percorso-opera" href="figura-umana.html">
+    <img src="arco.webp" alt="Opera di Pierangelo Rosati">
+    <div>
       <h2>La figura umana</h2>
       <p>
         Il corpo come territorio inquieto, soglia tra identità individuale
         e dimensione universale dell'esistenza.
       </p>
       <span class="entra-opere">Esplora la galleria →</span>
-    </a>
+    </div>
+  </a>
 
-    <a class="percorso-opera" href="visioni.html">
-      <img src="lumacone.webp"
-           alt="Opera di Pierangelo Rosati">
+  <a class="percorso-opera" href="visioni.html">
+    <img src="lumacone.webp" alt="Opera di Pierangelo Rosati">
+    <div>
       <h2>Visioni</h2>
       <p>
         Immagini e presenze che affiorano da una dimensione primordiale,
         sospesa tra natura, sogno e memoria.
       </p>
       <span class="entra-opere">Esplora la galleria →</span>
-    </a>
-
-  </div>
+    </div>
+  </a>
 </main>
 
 <footer>
