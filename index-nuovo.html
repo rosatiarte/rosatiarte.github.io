@@ -5,238 +5,324 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Pierangelo Rosati | Pittura e ricerca visiva</title>
-  <meta name="description" content="Una selezione di opere di Pierangelo Rosati: figura umana, immagini e visioni.">
+  <title>Pierangelo Rosati | Atelier visivo</title>
+  <meta name="description" content="Una selezione di opere di Pierangelo Rosati, tra figura umana, immagini e visioni.">
 
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="style.css">
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      background: #f5f2ec;
-      color: #292722;
+      margin: 0;
+      background: #191918;
+      color: #eeeae2;
+      font-family: Georgia, "Times New Roman", serif;
     }
 
     header {
-      padding: 28px 7%;
-      border-bottom: 1px solid #ded9cf;
+      padding: 27px 6%;
+      border-bottom: 1px solid #393835;
     }
 
     header h1 {
-      font-size: 25px;
+      margin: 0;
+      font-size: 23px;
+      font-weight: normal;
       letter-spacing: 2px;
     }
 
     header > p {
-      color: #716b61;
-      letter-spacing: 1px;
+      color: #aaa59b;
       font-size: 12px;
+      letter-spacing: 1px;
     }
 
     nav {
-      margin-top: 22px;
+      margin-top: 20px;
     }
 
     nav a {
+      color: #eeeae2;
+      text-decoration: none;
       margin-right: 25px;
       font-size: 12px;
       letter-spacing: 1.5px;
     }
 
-    .intro-home {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 55px 6% 75px;
+    nav a:hover,
+    footer a:hover {
+      color: #d3a879;
     }
 
-    .etichetta {
+    .contenitore {
+      width: 88%;
+      max-width: 1350px;
+      margin: auto;
+    }
+
+    .apertura {
+      padding: 65px 0 75px;
+    }
+
+    .sopratitolo {
+      color: #d3a879;
       font-size: 11px;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: #89735e;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
 
-    .titolo-home {
-      font-size: clamp(36px, 5vw, 64px);
-      line-height: 1.08;
+    .titolo {
+      font-size: clamp(42px, 7vw, 88px);
+      line-height: 1.02;
       font-weight: normal;
-      max-width: 760px;
       margin: 0 0 25px;
+      max-width: 850px;
     }
 
-    .testo-home {
-      max-width: 560px;
+    .introduzione {
+      max-width: 510px;
+      color: #b8b2a8;
       font-size: 16px;
-      line-height: 1.9;
-      color: #625e56;
-      margin-bottom: 35px;
+      line-height: 1.8;
+      margin-bottom: 45px;
     }
 
-    .opera-principale {
+    .composizione {
+      display: grid;
+      grid-template-columns: 1.65fr 0.8fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .immagine-grande,
+    .immagine-piccola {
       display: block;
-      position: relative;
       overflow: hidden;
-      background: #e8e1d6;
-      color: inherit;
-      text-decoration: none;
+      background: #292825;
     }
 
-    .opera-principale img {
-      display: block;
+    .immagine-grande {
+      min-height: 420px;
+      position: relative;
+    }
+
+    .immagine-grande img {
       width: 100%;
-      height: clamp(280px, 52vw, 580px);
-      object-fit: contain;
+      height: 100%;
+      min-height: 420px;
+      display: block;
+      object-fit: cover;
       transition: transform 0.6s ease;
     }
 
-    .opera-principale:hover img {
-      transform: scale(1.015);
+    .immagine-grande:hover img,
+    .immagine-piccola:hover img {
+      transform: scale(1.035);
     }
 
-    .didascalia-principale {
+    .colonna-immagini {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 18px;
+      min-height: 420px;
+    }
+
+    .immagine-piccola img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 200px;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .didascalia {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      padding: 17px 22px;
-      background: #e8e1d6;
-      font-size: 12px;
-      letter-spacing: 1px;
+      gap: 15px;
+      padding-top: 15px;
+      color: #aaa59b;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
     }
 
-    .sezioni-home {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 0 6% 85px;
+    .percorsi {
+      background: #242321;
+      padding: 65px 0 75px;
+      border-top: 1px solid #393835;
+      border-bottom: 1px solid #393835;
     }
 
-    .titolo-sezioni {
-      font-size: 30px;
+    .titolo-sezione {
+      font-size: 34px;
       font-weight: normal;
-      margin: 0 0 28px;
+      margin: 0 0 35px;
     }
 
-    .griglia-home {
+    .griglia-percorsi {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 28px;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
     }
 
-    .scheda-home {
-      display: block;
+    .percorso {
       color: inherit;
       text-decoration: none;
       min-width: 0;
     }
 
-    .immagine-scheda {
+    .percorso-immagine {
+      height: 270px;
       overflow: hidden;
-      background: #e8e1d6;
+      background: #302f2b;
     }
 
-    .immagine-scheda img {
-      display: block;
+    .percorso-immagine img {
       width: 100%;
-      height: 280px;
-      object-fit: contain;
-      transition: transform 0.4s ease, opacity 0.4s ease;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      transition: transform 0.5s ease, opacity 0.5s ease;
     }
 
-    .scheda-home:hover img {
-      transform: scale(1.025);
-      opacity: 0.85;
+    .percorso:hover .percorso-immagine img {
+      transform: scale(1.035);
+      opacity: 0.82;
     }
 
-    .numero-scheda {
-      margin: 22px 0 8px;
-      color: #89735e;
+    .numero {
+      margin: 22px 0 10px;
+      color: #d3a879;
       font-size: 11px;
       letter-spacing: 2px;
     }
 
-    .scheda-home h3 {
-      font-size: 25px;
+    .percorso h3 {
+      font-size: 28px;
       font-weight: normal;
-      margin: 0 0 10px;
+      margin: 0 0 9px;
     }
 
-    .scheda-home p {
+    .percorso p:last-child {
+      color: #aaa59b;
       font-size: 14px;
-      line-height: 1.7;
-      color: #625e56;
       margin: 0;
     }
 
-    .nota-finale {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 28px 6% 55px;
-      border-top: 1px solid #ded9cf;
-      color: #716b61;
-      font-size: 13px;
+    .nota {
+      padding: 45px 0 55px;
+      color: #aaa59b;
+      font-size: 14px;
       line-height: 1.8;
+      max-width: 650px;
     }
 
     footer {
-      border-top: 1px solid #ded9cf;
+      border-top: 1px solid #393835;
+      padding: 25px 6% 30px;
+      color: #aaa59b;
+      font-size: 12px;
     }
 
-    @media (max-width: 600px) {
+    footer p {
+      margin-bottom: 15px;
+    }
+
+    footer a {
+      color: #eeeae2;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+
+    @media (max-width: 650px) {
       header {
-        padding: 25px 6%;
+        padding: 24px 6%;
       }
 
-      .intro-home {
-        padding: 40px 6% 50px;
+      .contenitore {
+        width: 88%;
       }
 
-      .titolo-home {
-        font-size: 39px;
+      .apertura {
+        padding: 42px 0 50px;
       }
 
-      .testo-home {
+      .titolo {
+        font-size: 47px;
+      }
+
+      .introduzione {
         font-size: 15px;
+        margin-bottom: 30px;
       }
 
-      .opera-principale img {
-        height: 320px;
+      .composizione {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
       }
 
-      .didascalia-principale {
-        padding: 14px;
-        font-size: 10px;
+      .immagine-grande {
+        min-height: 300px;
       }
 
-      .sezioni-home {
-        padding-bottom: 55px;
+      .immagine-grande img {
+        min-height: 300px;
       }
 
-      .griglia-home {
-        gap: 16px;
+      .colonna-immagini {
+        min-height: 300px;
+        gap: 10px;
       }
 
-      .immagine-scheda img {
-        height: 150px;
+      .immagine-piccola img {
+        min-height: 145px;
       }
 
-      .scheda-home h3 {
-        font-size: 19px;
+      .didascalia {
+        font-size: 9px;
+        letter-spacing: 1px;
       }
 
-      .scheda-home p {
+      .percorsi {
+        padding: 45px 0 50px;
+      }
+
+      .griglia-percorsi {
+        gap: 14px;
+      }
+
+      .percorso-immagine {
+        height: 165px;
+      }
+
+      .percorso h3 {
+        font-size: 20px;
+      }
+
+      .percorso p:last-child {
         font-size: 12px;
+        line-height: 1.6;
       }
 
-      .titolo-sezioni {
-        font-size: 26px;
+      .titolo-sezione {
+        font-size: 28px;
+      }
+
+      footer a {
+        display: inline-block;
+        margin: 0 14px 12px 0;
       }
     }
   </style>
 </head>
 
 <body>
-
 <header>
   <h1>PIERANGELO ROSATI</h1>
   <p>Pittura · Disegno · Ricerca visiva</p>
@@ -247,55 +333,69 @@
 </header>
 
 <main>
-  <section class="intro-home">
-    <p class="etichetta">Pittura contemporanea · Ricerca visiva</p>
+  <section class="apertura contenitore">
+    <p class="sopratitolo">Atelier visivo · Pierangelo Rosati</p>
 
-    <h2 class="titolo-home">
-      Immagini, figure,<br>simboli.
-    </h2>
+    <h2 class="titolo">Immagini,<br>figure, simboli.</h2>
 
-    <p class="testo-home">
-      Una selezione di opere tra figura umana e visioni,
-      in un percorso pittorico che esplora la presenza,
-      l'immaginazione e le forme profonde dell'esistenza.
+    <p class="introduzione">
+      Una selezione di opere in cui la figura umana,
+      l'immaginazione e le forme simboliche si incontrano
+      in un'indagine sulla presenza e sull'esistenza.
     </p>
 
-    <a class="opera-principale" href="opere.html">
-      <img src="apertura.webp"
-           alt="Opera di Pierangelo Rosati: tre figure urlanti su uno sfondo giallo e blu">
-      <div class="didascalia-principale">
-        <span>PIERANGELO ROSATI — OPERE</span>
-        <span>ESPLORA LA COLLEZIONE ↗</span>
-      </div>
-    </a>
-  </section>
+    <div class="composizione">
+      <a class="immagine-grande" href="opere.html">
+        <img src="apertura.webp"
+             alt="Opera di Pierangelo Rosati con tre figure su fondo giallo e blu">
+      </a>
 
-  <section class="sezioni-home">
-    <h2 class="titolo-sezioni">I percorsi</h2>
-
-    <div class="griglia-home">
-      <a class="scheda-home" href="figura-umana.html">
-        <div class="immagine-scheda">
+      <div class="colonna-immagini">
+        <a class="immagine-piccola" href="figura-umana.html">
           <img src="arco.webp" alt="Opera dalla serie La figura umana">
-        </div>
-        <p class="numero-scheda">01 — FIGURA</p>
-        <h3>La figura umana</h3>
-        <p>Volti, corpi e presenza</p>
-      </a>
+        </a>
 
-      <a class="scheda-home" href="visioni.html">
-        <div class="immagine-scheda">
+        <a class="immagine-piccola" href="visioni.html">
           <img src="lumacone.webp" alt="Opera dalla serie Visioni">
-        </div>
-        <p class="numero-scheda">02 — VISIONI</p>
-        <h3>Visioni</h3>
-        <p>Immagini, forme e simboli</p>
-      </a>
+        </a>
+      </div>
+    </div>
+
+    <div class="didascalia">
+      <span>Una ricerca pittorica</span>
+      <span>Esplora le opere ↗</span>
     </div>
   </section>
 
-  <section class="nota-finale">
-    Il sito presenta una selezione di opere di Pierangelo Rosati.
+  <section class="percorsi">
+    <div class="contenitore">
+      <h2 class="titolo-sezione">Due percorsi, un immaginario.</h2>
+
+      <div class="griglia-percorsi">
+        <a class="percorso" href="figura-umana.html">
+          <div class="percorso-immagine">
+            <img src="arco.webp" alt="Opera dalla serie La figura umana">
+          </div>
+          <p class="numero">01 — FIGURA</p>
+          <h3>La figura umana</h3>
+          <p>Volti, corpi e presenza</p>
+        </a>
+
+        <a class="percorso" href="visioni.html">
+          <div class="percorso-immagine">
+            <img src="lumacone.webp" alt="Opera dalla serie Visioni">
+          </div>
+          <p class="numero">02 — VISIONI</p>
+          <h3>Visioni</h3>
+          <p>Immagini, forme e simboli</p>
+        </a>
+      </div>
+
+      <p class="nota">
+        Il sito presenta una selezione di opere di Pierangelo Rosati,
+        parte di una ricerca pittorica in continua evoluzione.
+      </p>
+    </div>
   </section>
 </main>
 
@@ -308,6 +408,5 @@
     <a href="#" onclick="if (navigator.share) { navigator.share({title: document.title, url: window.location.href}); } else if (navigator.clipboard) { navigator.clipboard.writeText(window.location.href).then(() => alert('Link copiato!')); } else { prompt('Copia questo indirizzo:', window.location.href); } return false;">Condividi</a>
   </div>
 </footer>
-
 </body>
 </html>
